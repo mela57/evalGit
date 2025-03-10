@@ -1,88 +1,115 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-.container{
+body {
+    background-color: #1e1e1e;
     display: flex;
-    margin: auto;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-#calculatrice{
-    border: solid 2px rgb(107, 106, 106);
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#calculatrice {
+    border: none;
     border-radius: 15px;
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-    margin: auto;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 4px 12px;
     padding: 20px;
-    margin-top: 100px;
+    background: #2c2c2c;
     width: 400px;
     height: 600px;
-    background-color: rgb(214, 228, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-#resultat{
-    padding-bottom: 20px;
-    text-align: center;
+#resultat {
+    width: 100%;
+    margin-bottom: 15px;
 }
 
-#res{
-    text-align: center;
-    width: 350px;
-    height: 80px;
-    font-size: 3em;
+#res {
+    width: 100%;
+    height: 70px;
+    font-size: 2.5em;
+    text-align: right;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background: #424242;
+    color: #fff;
 }
 
-#operateurs{
-    text-align: center;
-    padding: 20px;
+#ecran {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 15px;
 }
 
-#chiffres{
-    text-align: center;
-    padding: 20px;
-}
-
-input{
-    padding: 20px;
-    margin-bottom: 5px;
-}
-
-input[type=button]{
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-    border-radius: 20px;
+#ecran input {
+    width: 30%;
+    height: 50px;
     font-size: 1.5em;
-    border: solid 1px rgb(78, 78, 78);
-}
-
-input[type=text]{
-    border: solid 1px rgb(80, 80, 80);
-    border-radius: 5px; 
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-}
-
-#ecran{
     text-align: center;
+    border: none;
+    border-radius: 10px;
+    background: #555;
+    color: white;
 }
 
-#nb1{
-    width: 80px;
-    height: 80px;
-    text-align: center;
+#operateurs,
+#chiffres {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 10px;
 }
 
-#nb2{
-    width: 80px;
-    height: 80px;
-    text-align: center;
+input[type=button] {
+    width: 70px;
+    height: 70px;
+    font-size: 1.5em;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 2px 5px;
 }
 
-#operateur{
-    width: 80px;
-    height: 80px;
-    text-align: center;
+#operateurs input {
+    background: #ff8c00;
+    color: white;
 }
 
-#c{
-    margin-top: 5px;
+#chiffres input {
+    background: #666;
+    color: white;
+}
+
+#egal {
+    background: #4caf50;
+    color: white;
+}
+
+#c {
+    background: #d32f2f;
+    color: white;
+}
+
+input[type=button]:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
 }
